@@ -1,5 +1,5 @@
 {% set name = "picaso" %}
-{% set version = "3.2.2" %}
+{% set version = "4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/picaso-{{ version }}.tar.gz
-  sha256: dd43cec5a2f556a4484a8111a4ade74083ff95ce3cfde2e15ae11594062728f2
+  sha256: c1476aff304f714d5accbc9d8b2a2f2cd8052ef2d2e93057990257944d03148b
 
 build:
   noarch: python
@@ -21,22 +21,26 @@ requirements:
     - setuptools
   run:
     - python >={{ python_min }}
-    - bokeh >=2.3.0,<3.5.0
-    - numpy <1.27
+    - bokeh >=2.3.0,<3.8.2
+    - numpy >=2.0
     - numba
     - pandas
     - joblib
     - photutils
     - astropy-base >=3.2.3
     - matplotlib-base
-    - pysynphot
+    - stsynphot
     - sphinx
     - scipy
-    - virga-exo ==0.4
+    - h5py
+    - virga-exo ==2.0.1
     - xarray
-    - bibtexparser
+    - pooch
+    - tqdm
+    - bibtexparser ==1.4.4
     - netcdf4
     - h5netcdf
+    - jupytext
 
 test:
   imports:

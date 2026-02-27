@@ -21,22 +21,26 @@ requirements:
     - setuptools
   run:
     - python >={{ python_min }}
-    - bokeh >=2.3.0,<3.5.0
-    - numpy <1.27
+    - bokeh>=2.3.0,<3.8.2
+    - numpy>=2.0
     - numba
     - pandas
     - joblib
     - photutils
     - astropy-base >=3.2.3
     - matplotlib-base
-    - pysynphot
+    - stsynphot
     - sphinx
     - scipy
-    - virga-exo ==0.4
+    - h5py
+    - virga-exo==2.0.1
     - xarray
-    - bibtexparser
+    - pooch
+    - tqdm
+    - bibtexparser==1.4.4
     - netcdf4
     - h5netcdf
+    - jupytext
 
 test:
   imports:

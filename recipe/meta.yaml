@@ -1,5 +1,5 @@
 {% set name = "picaso" %}
-{% set version = "4.0" %}
+{% set version = "4.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/picaso-{{ version }}.tar.gz
-  sha256: c1476aff304f714d5accbc9d8b2a2f2cd8052ef2d2e93057990257944d03148b
+  sha256: 9912889347cef8fcfb06ecf691734d96b45cc9757d1a7b556ef0134313b98f23
 
 build:
   noarch: python
